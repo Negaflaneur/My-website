@@ -9,13 +9,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
 </head>
+
+<header>
+	<h1>My BLOG</h1>
+	<p><script type="text/javascript" src="JS.js"> </script> <br> Welcome to my first website, hope you`ll enjoy it</p> 
+	<nav>
+		<ul>
+			<li><a href="#aboutMe">About</a>></li>
+			<li><a href="#Skills">Skills</a>></li>
+			<li><a href="#Schedule">Schedule</a>></li>
+			<li><a href="#media">Media</a>></li>
+			<li><a href="#contact">Contacts</a>></li>
+			<li><a href="#contacts">Follow</a>></li>
+			<li><a href="#projects">Projects</a>></li>
+		</ul>
+	</nav> 
+	
+</header>
+
 <body>
-<!-- header begins -->
+<!-- header begins 
 <div id = "header" class="selection">
-<!--<img src="img.jpeg" alt = "">-->
 <p><script type="text/javascript" src="JS.js"> </script> <br> Welcome to my first website, hope you`ll enjoy it</p>
 </div>
-<!-- header ends -->
+header ends -->
 <!-- about me section -->
 <div id = "aboutMe"class="selection">
  <h1><span>About me</span></h1>
@@ -24,7 +41,7 @@
 </div>
 <!-- about me section ends-->
 <!-- My skills section starts-->
-<div class="selection">
+<div id="Skills" class="selection">
 	<h1><span>My skills</span></h1>
 	<ul>
 		<li>
@@ -47,7 +64,7 @@
 </div>
 <!-- my skills section finishes -->
  <!-- my timetable starts-->
- <div class="selection">
+ <div id="Schedule" class="selection">
  	<h1><span>Schedule</span></h1>
  	<table>
  		<tr>
@@ -97,13 +114,13 @@
  </div>
  <!-- my timetable finishes -->
  <!-- media section starts -->
-<div class="selection">
+<div id="media" class="selection">
 	<h1><span>My media</span></h1>
 	<iframe  src="https://www.youtube.com/embed/QYjPBcqo1-s" frameborder="5px" width="70%" height="550px" ></iframe>
 </div>
 <!-- media section finishes-->
 <!-- contact section starts-->
-<div class="selection">
+<div id="contact" class="selection">
 	<h1><span>Contact me</span></h1>
 	<form>
 		<input type="text" name="name" placeholder="Name" required > <br>
@@ -122,12 +139,20 @@
 </div>
 <!-- follow me section ends-->
 <!-- My projects section begins-->
-<div class="selection">
+<div id="projects" class="selection">
 	<h1><span>My projects</span></h1>
 	<p id="pp">jjdjjd</p>
-<div id="cV" align="center">
-		<script type="text/javascript" src="projects.js"></script>
-</div>
+
+	<div id="container"></div>
+<div id="left"></div>	
+<div id="center"></div>
+<div id="right"></div>
+<div id="snakee" align="center"></div>
+<!--<script type="text/javascript" src="shapes.js"></script>-->
+<script type="text/javascript" src="Darray.js"></script>
+<script type="text/javascript" src="projects.js"></script>
+<script type="text/javascript" src="snake.js"></script>
+	
 </div>
 <!-- My project section ends-->
 <!-- copyright section begins-->

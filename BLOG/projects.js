@@ -2,56 +2,64 @@ var message = 'Here are some of my projcts';
 var pp = document.getElementById('pp');
 pp.innerHTML = message;
 
-/*var circles = [];
-function setup(){
-	let canvas = createCanvas(800, 800);
-	canvas.parent('cV');
+let Path = function(s){
+s.verticies = []
+s.setup = function() {
+  s.createCanvas(400, 400);
 
 }
 
+s.mousePressed = function(){
+s.v = createVector(s.mouseX,s.mouseY);
+  s.verticies.push(s.v);
+}
 
-function draw(){
-	background(0);
-}*/
-
-let circles = []
-function setup() {
-  createCanvas(400, 400);
+s.draw = function() {
+  s.background(0);
   
-  for (let i = 0; i < 300; i++){
+  s.reached = [];
+  s.unreached = [];
   
-    let ball = {
-    x : random(width),
-      y : random(height),
-      r: random(1, 20)
-    };
-    let protection = 0;
-    var overlapping = false;
-     for (let j = 0; j < circles.length; j++){
-       var other = circles[j];
-     var d= dist(ball.x, ball.y, other.x, other.y);
-       
-       if(d < ball.r + other.r){
-          overlapping = true;
-         break;
-          }
+  for(s.i = 0; s.i < s.verticies.length; s.i++){
+  s.unreached.push(s.verticies[s.i]);
   }
-    if(!overlapping){
-    circles.push(ball);
-      protection++
-      if (protection > 50000){
-          break;
-          }
+  s.reached.push(s.unreached[0]);
+  s.unreached.splice(0, 1);
+  
+  while( s.unreached.length > 0){
+  s.record = 100000;
+    s. rIndex;
+    s. uIndex;
+    
+    for(s.i = 0; s.i < s.reached.length; s.i++){
+    
+      for(s.j = 0; s.j < s.unreached.length; s.j++){
+        s.v1= s.reached[s.i];
+        s.v2 = s.unreached[s.j];
+        s.d = dist(s.v1.x, s.v1.y, s.v2.x, s.v2.y);
+        
+        if(s.d< s.record){
+        s.record = s.d;
+         s. rIndex = s.i;
+          s.uIndex = s.j;
+        }
+      }
+    }
+    s.stroke(255);
+    s.strokeWeight(2);
+      s.line(s.reached[s.rIndex].x, s.reached[s.rIndex].y, s.unreached[s.uIndex].x,s. unreached[s.uIndex].y);
+    
+      s.reached.push(s.unreached[s.uIndex]);
+  s.unreached.splice(s.uIndex, 1);
+  }
+  
+  for(s.i = 0;s.i < s.verticies.length; s.i++){
+  s.fill(255);
+    s.ellipse(s.verticies[s.i].x, s.verticies[s.i].y, 20, 20);
   }
 }
-}
+};
+new p5(Path,'right');
 
 
-function draw() {
-  background(2);
-  
-     for (let i = 0; i < circles.length; i++){
-       fill(100, 100, 0);
-  ellipse(circles[i].x, circles[i].y, circles[i].r*2, circles[i].r*2);
-   }
-}
+
