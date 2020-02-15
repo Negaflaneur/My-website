@@ -8,8 +8,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script>
 </head>
-
 <header>
 	<h1>My BLOG</h1>
 	<p><script type="text/javascript" src="JS.js"> </script> <br> Welcome to my first website, hope you`ll enjoy it</p> 
@@ -18,26 +18,38 @@
 			<li><a href="#aboutMe">About</a>></li>
 			<li><a href="#Skills">Skills</a>></li>
 			<li><a href="#Schedule">Schedule</a>></li>
-			<li><a href="#media">Media</a>></li>
-			<li><a href="#contact">Contacts</a>></li>
-			<li><a href="#contacts">Follow</a>></li>
 			<li><a href="#projects">Projects</a>></li>
+			<li><a href="#contact">Contacts</a>></li>
+			<li><a href="#media">Media</a>></li>
+			<li><a href="#contacts">Follow</a>></li>
+			<li><a href="#Adventures">Adventures</a>></li>
 		</ul>
 	</nav> 
-	
 </header>
-
+<input type="checkbox" name="mode">
 <body>
-<!-- header begins 
-<div id = "header" class="selection">
-<p><script type="text/javascript" src="JS.js"> </script> <br> Welcome to my first website, hope you`ll enjoy it</p>
-</div>
-header ends -->
 <!-- about me section -->
-<div id = "aboutMe"class="selection">
- <h1><span>About me</span></h1>
- <p>Hi. My name is <strong>Alex</strong> and coding has changed my world! I used to think that <b>Coding</b> is really hard to learn but, as it turned out the only thing you need to have is a desire to learn new things. It`s not just about creating apps, software or websites, <em>programming</em> also gave me some usful skills like problem-solving and quick-thinking. It`s really fun!</p>
- <p id="quote">“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”</p>
+<div id="aboutMe" class="AboutME">
+<div class="selection">
+	<h1><span>About me</span></h1>
+	<div class="containerer">
+		<span class="en">English</span>
+		<input type="checkbox" class="check">
+		<span class="ru"> Русский</span>
+		<div class="content contentEnglish">
+			<h2>English</h2>
+			<p><p>Hi. My name is <strong>Alex</strong> and coding has changed my world! I used to think that <b>Coding</b> is really hard to learn but, as it turned out the only thing you need to have is a desire to learn new things. It`s not just about creating apps, software or websites, <em>programming</em> also gave me some usful skills like problem-solving and quick-thinking. It`s really fun!</p>
+ <p id="quote">“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”</p></p>
+		</div>
+		<div class="content contentRussian">
+			<h2>Russian</h2>
+			<p>
+				Привет. Меня зовут <strong>Леша </strong> и программирование изменило мою жизнь! Я думал, что  <b>Coding</b> очень трудно овладеть, как оказалосьб единственное , что у тебя должно быть это желание учиться чему-то новому.программирование это не только создание сайтов, приложений, <em>programming</em> оно мне дало ряд ценныч навыков. Попробуй, это очень весело!
+			</p>
+<p id="quote">“Любой дурак может написать код, который будет понимать компьютер. Хороший программист пишет код, который понятен людям!”</p></p>
+		</div>
+	</div>
+</div>
 </div>
 <!-- about me section ends-->
 <!-- My skills section starts-->
@@ -109,10 +121,38 @@ header ends -->
  			<td class="selected">Coding</td>
  			<td class="unselected">Bed time</td>
  		</tr>
-
  	</table>
  </div>
  <!-- my timetable finishes -->
+ <!-- My adventures section starts-->
+ <div class="selection" id="Adventures">
+ 	<h1><span>My adventures</span></h1>
+ 	<div class="slidershow middle">
+
+ 		<div class="slides">
+ 			<input type="radio" name="r" id="r1" checked>
+ 			<input type="radio" name="r" id="r2">
+ 			<input type="radio" name="r" id="r3">
+ 			<input type="radio" name="r" id="r4">
+ 			<input type="radio" name="r" id="r5">
+ 			
+ 			<div class="slide s1"><img src="1.jpg"></div>
+ 			<div class="slide"><img src="2.jpg"></div>
+ 			<div class="slide"><img src="3.jpg"></div>
+ 			<div class="slide"><img src="4.jpg"></div>
+ 			<div class="slide"><img src="5.jpg"></div>
+ 		</div>
+
+ 		<div class="navigation">
+ 			<label for="r1" class="bar"></label>
+ 			<label for="r2" class="bar"></label>
+ 			<label for="r3" class="bar"></label>
+ 			<label for="r4" class="bar"></label>
+ 			<label for="r5" class="bar"></label>
+ 		</div>
+ 	</div>
+ </div>
+ <!-- My adventure section finishes-->
  <!-- media section starts -->
 <div id="media" class="selection">
 	<h1><span>My media</span></h1>
@@ -122,7 +162,7 @@ header ends -->
 <!-- contact section starts-->
 <div id="contact" class="selection">
 	<h1><span>Contact me</span></h1>
-	<form>
+	<form action="https://e.mail.ru" method="get">
 		<input type="text" name="name" placeholder="Name" required > <br>
 		<input type="text" name="email" placeholder="Email" required> <br>
 		<textarea name="massage" placeholder="Massage" required></textarea>
@@ -134,7 +174,7 @@ header ends -->
 <div class="selection" id="contacts">
 	<h1><span> Follow me</span></h1>
 	<a href="#"><img src="twitter.jpeg" alt="Twitter"></a>
-	<a href="https://vk.com/id241779904"><img src="VK.jpeg" alt="VK"></a>
+	<a href="https://vk.com/id241779904"><img src="vkon.jpeg" alt="VK"></a>
 	<a href="#"><img src="instagram.jpeg" alt="Instagram"></a>
 </div>
 <!-- follow me section ends-->
@@ -152,9 +192,9 @@ header ends -->
 <script type="text/javascript" src="Darray.js"></script>
 <script type="text/javascript" src="projects.js"></script>
 <script type="text/javascript" src="snake.js"></script>
-	
 </div>
 <!-- My project section ends-->
+<script type="text/javascript" src="scrolling.js"></script>
 <!-- copyright section begins-->
 <div class="copyright">
 	&copy; 2020 My blog. All rights reserved.

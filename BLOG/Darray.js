@@ -11,6 +11,10 @@ p.setup = function(){
   }
   }
 }
+p.windowResized = function(){
+  p.resizeCanvas(p.windowWidth/3, p.windowHeight/3);
+  
+}
 
  p.draw = function() {
   p.background(220);

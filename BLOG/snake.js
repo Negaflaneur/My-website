@@ -74,6 +74,9 @@ let song;
 img = loadImage('snake.jpg');
   song = loadSound('song.mp3');
 }*/
+function windowResized(){
+  resizeCanvas(windowWidth/3, windowHeight/3);
+}
 
 function setup() {
   let csnake = createCanvas(400, 400);

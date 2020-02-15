@@ -8,6 +8,10 @@ s.setup = function() {
   s.createCanvas(400, 400);
 
 }
+s.windowResized = function(){
+  s.resizeCanvas(s.windowWidth/3, s.windowHeight/3);
+  
+}
 
 s.mousePressed = function(){
 s.v = createVector(s.mouseX,s.mouseY);
